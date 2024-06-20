@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    scroll-behavior: smooth;
+
+}
+*{box-sizing: border-box;}
+body{
+    background: url("../public/bg.jpg") no-repeat fixed center center ;
+    backdrop-filter: blur(4px);
+    background-size: cover;
+}
+
+header{
+    background: rgba(255, 255, 255, 0.4);
+
+    backdrop-filter: blur(10px);
+}
+.menu-link{
+    @apply px-2 py-1 text-blue-900;
+}
+
+
+.active-link{
+    color: #F96302;
+    border-bottom: 2px solid #F96302;
+    font-weight: bold;
+}
