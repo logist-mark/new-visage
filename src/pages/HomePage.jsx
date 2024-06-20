@@ -3,7 +3,7 @@ import HeroSlider from "../components/HeroSlider.jsx";
 
 const HomePage = () => {
     return (
-        <div className='w-full h-[1000px] px-60 py-10'>
+        <div className='w-full  px-52 py-10'>
             <HeroSlider/>
         </div>
     );
