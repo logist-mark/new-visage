@@ -18,10 +18,16 @@ header{
 
     backdrop-filter: blur(15px);
 }
-.menu-link{
-    @apply p-1 text-blue-900;
-}
 
+
+.menu-link{
+    @apply p-1 text-blue-900 border-b-[2px] border-b-transparent duration-300;
+}
+.menu-link:hover{
+    color: #F96302;
+    border-bottom: 2px solid #F96302;
+    transition: .3s;
+}
 
 .active-link{
     color: #F96302;
