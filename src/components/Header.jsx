@@ -17,7 +17,7 @@ const Header = () => {
                     <li className='menu-link'><a href='#'>Фото</a></li>
                 </ul>
             </nav>
-            <div className='hidden md:block text-[#F96302] font-semibold xl:text-[12px] 2xl:text-[16px] '>
+            <div className='hidden lg:block text-[#F96302] font-semibold xl:text-[12px] 2xl:text-[16px] '>
                 <p className='flex items-center gap-4 mb-2'><FaPhone className='text-xl'/> +38 (067) 412 44 73</p>
                 <p className='flex items-center gap-4'><CiMail className='text-xl'/>contacts.oknamark@ukr.net</p>
 
