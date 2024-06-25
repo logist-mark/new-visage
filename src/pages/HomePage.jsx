@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroSlider from "../components/HeroSlider.jsx";
+import HeroSlider from "../components/Slider/HeroSlider.jsx";
 
 const HomePage = () => {
     return (
