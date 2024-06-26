@@ -21,14 +21,14 @@ const Header = () => {
                 <ul className='hidden xl:flex lg:gap-2 xl:gap-4 2xl:gap-6 font-semibold text-blue-900 *:uppercase lg:text-[10px] xl:text-[12px] 2xl:text-[16px]'>
                     <li className='menu-link active-link'><a href='#'>Головна</a></li>
                     <li className='menu-link'><a href='#'>Виробництво</a></li>
-                    <li className='menu-link'><a href='#'>Нашим дилерам</a></li>
+                    <li className='menu-link'><a href='#'>Дилерам</a></li>
                     <li className='menu-link'><a href='#'>Сертифікати</a></li>
                     <li className='menu-link'><a href='#'>Про нас</a></li>
                     <li className='menu-link'><a href='#'>Контакти</a></li>
                     <li className='menu-link'><a href='#'>Фото</a></li>
                 </ul>
             </nav>
-            <div className='hidden lg:block text-[#F96302] font-semibold xl:text-[12px] 2xl:text-[16px] '>
+            <div className='hidden xl:block text-[#F96302] font-semibold xl:text-[12px] 2xl:text-[16px] '>
                 <p className='flex items-center gap-4 mb-2'><FaPhone className='text-xl'/> +38 (067) 412 44 73</p>
                 <p className='flex items-center gap-4'><CiMail className='text-xl'/>contacts.oknamark@ukr.net</p>
 
