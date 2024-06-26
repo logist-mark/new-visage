@@ -10,13 +10,13 @@ html{
 *{box-sizing: border-box;}
 body{
 
-    background: url("../public/bg.jpg") no-repeat fixed center center ;
+    background: url("../public/bg.jpg") no-repeat fixed bottom center ;
     backdrop-filter: blur(10px) grayscale(0.9);
     background-size: cover;
     /*font-family: 'Montserrat', sans-serif;*/
 }
 
-header{
+header, footer{
     background: rgba(255, 255, 255, 1);
 }
 
