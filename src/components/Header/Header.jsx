@@ -1,8 +1,18 @@
 
 import { FaPhone} from "react-icons/fa";
 import {CiMail, CiMenuBurger} from "react-icons/ci";
+import {useState} from "react";
+import MobileMenu from "./MobileMenu.jsx";
+import {RxCross1} from "react-icons/rx";
 
 const Header = () => {
+    const [menuShown, setMenuShown] = useState(false);
+
+    function toggleMenu() {
+        setMenuShown(!menuShown);
+    }
+
+
     return (
         <header className='flex gap-2 items-center justify-between px-6 lg:px-40 xl:px-52 pt-4 sticky top-0 z-10'>
             <img src="/logo.png" width={180} alt="Visage logo"/>
@@ -22,7 +32,9 @@ const Header = () => {
                 <p className='flex items-center gap-4'><CiMail className='text-xl'/>contacts.oknamark@ukr.net</p>
 
             </div>
-            <button className='block xl:hidden text-3xl'><CiMenuBurger/></button>
+
+            <button className='block xl:hidden text-3xl z-20' onClick={toggleMenu}>{!menuShown ? <CiMenuBurger/> : <RxCross1 className='text-white'/>}</button>
+            {menuShown && <MobileMenu/>}
         </header>
     );
 };

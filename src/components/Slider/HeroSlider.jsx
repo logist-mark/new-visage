@@ -54,7 +54,7 @@ const HeroSlider = () => {
     }, [currentSlideIndex])
 
     return (
-        <div className="relative w-full h-[530px] xl:h-[580px] 2xl:h-[780px]  bg-white/80 rounded-lg overflow-auto ">
+        <div className="relative z-0 w-full h-[530px] xl:h-[580px] 2xl:h-[780px]  bg-white/80 rounded-lg overflow-auto ">
             <Slide {...currentSlide}/>
             <div className='absolute bottom-6 right-8 z-10 flex gap-10 text-5xl text-white '>
                 <button onClick={handlePrevSlide}
