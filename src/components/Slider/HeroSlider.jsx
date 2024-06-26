@@ -1,7 +1,7 @@
-import  {useEffect, useState} from 'react';
-import Slide from "./Slide.jsx";
-import {FaArrowLeft, FaArrowRight} from "react-icons/fa";
+import  {useState, useEffect} from 'react';
 
+import Slides from "./Slides.jsx";
+import {FaArrowLeft, FaArrowRight} from "react-icons/fa";
 const SLIDES = [
     {
         id: 1,
@@ -33,17 +33,16 @@ const SLIDES = [
 ]
 
 
-const HeroSlider = () => {
-    const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-    const currentSlide = SLIDES[currentSlideIndex];
 
+const HeroSlider = () => {
+    const [index, setIndex] = useState(0);
 
     function handleNextSlide() {
-        setCurrentSlideIndex(prevIndex => prevIndex + 1 < SLIDES.length ? prevIndex + 1 : 0);
+       setIndex(prevIndex => prevIndex + 1 > SLIDES.length - 1 ? 0 : prevIndex + 1);
     }
 
     function handlePrevSlide() {
-        setCurrentSlideIndex(prevIndex => prevIndex - 1 < 0 ? SLIDES.length - 1 : prevIndex - 1);
+        setIndex(prevIndex => prevIndex - 1 < 0 ? SLIDES.length - 1 : prevIndex - 1);
     }
 
     useEffect(() => {
@@ -51,11 +50,15 @@ const HeroSlider = () => {
         return () => {
             clearInterval(interval);
         }
-    }, [currentSlideIndex])
+    }, [index])
 
     return (
-        <div className="relative z-0 w-full h-[530px] xl:h-[580px] 2xl:h-[780px]  bg-white/80 rounded-lg overflow-auto ">
-            <Slide {...currentSlide}/>
+        <div
+
+
+
+            className="relative z-0 w-full h-[530px] xl:h-[580px] 2xl:h-[780px]   rounded-lg overflow-hidden">
+            <Slides slides={SLIDES} imgIndex={index}/>
             <div className='absolute bottom-6 right-8 z-10 flex gap-10 text-5xl text-white '>
                 <button onClick={handlePrevSlide}
                         className='bg-slate-900/30 p-2 rounded-sm hover:text-amber-600 hover:scale-110 duration-150'>

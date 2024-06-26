@@ -4,6 +4,7 @@ import {CiMail, CiMenuBurger} from "react-icons/ci";
 import {useState} from "react";
 import MobileMenu from "./MobileMenu.jsx";
 import {RxCross1} from "react-icons/rx";
+import {AnimatePresence} from "framer-motion";
 
 const Header = () => {
     const [menuShown, setMenuShown] = useState(false);
@@ -34,7 +35,7 @@ const Header = () => {
             </div>
 
             <button className='block xl:hidden text-3xl z-20' onClick={toggleMenu}>{!menuShown ? <CiMenuBurger/> : <RxCross1 className='text-white'/>}</button>
-            {menuShown && <MobileMenu/>}
+            <AnimatePresence>{menuShown && <MobileMenu/>}</AnimatePresence>
         </header>
     );
 };
