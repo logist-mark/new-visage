@@ -6,7 +6,7 @@ import ContactForm from "../components/ContactForm.jsx";
 
 const HomePage = () => {
     return (
-        <div className='w-full  px-2 py-6 xl:px-52 xl:py-10'>
+        <div className='w-full'>
             <HeroSlider/>
             <Partners/>
             <Trust/>

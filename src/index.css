@@ -9,7 +9,10 @@ html{
 }
 *{box-sizing: border-box;}
 body{
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
 
     background: url("../public/bg.jpg") no-repeat fixed bottom center ;
     backdrop-filter: blur(10px) grayscale(0.9);
@@ -20,6 +23,7 @@ body{
 
 header, footer{
     background: rgba(255, 255, 255, 1);
+
 }
 
 
