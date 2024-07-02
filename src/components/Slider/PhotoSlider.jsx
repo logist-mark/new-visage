@@ -1,47 +1,39 @@
-import React, {useEffect, useState} from 'react';
-import {motion} from "framer-motion";
+import {useEffect, useState} from "react";
 
 const PhotoSlider = ({photos}) => {
-    const [index, setIndex] = useState(0)
-    const x = index * 700;
+    const [current, setCurrent] = useState(1)
 
-    function handleNextSlide() {
-        setIndex(prevIndex => prevIndex + 1 > photos.length - 1 ? 0 : prevIndex + 1);
+    function handleSliderChange() {
+        setCurrent(prev => prev + 1 < photos.length ? prev + 1 : 0)
     }
-
-    function handlePrevSlide() {
-        setIndex(prevIndex => prevIndex - 1 < 0 ? photos.length - 1 : prevIndex - 1);
-    }
-
 
     useEffect(() => {
-        const interval = setInterval(handleNextSlide, 5000)
+        const interval = setInterval(handleSliderChange, 5000)
+
         return () => {
-            clearInterval(interval)
+            clearInterval(interval);
         }
-    }, [index])
+    }, [current])
+
+
     return (
-        <div className='w-full xl:w-[700px] flex overflow-hidden rounded-lg'>
-            <motion.div
-                animate={{
-                    translateX: `-${x}px`
-                }}
-                transition={{
-                    duration: .6
-                }}
-                className='flex '>
+        <div
+            className="container mx-auto flex py-4 w-[700px] flex-col gap-1 overflow-hidden rounded md:flex-row">
+            <div className="slider flex gap-1 items-end"
+            style={{
+                marginLeft: `-${current * 200}px`,
+            }}
+            >
+                {photos.map((photo, index) => <div key={index}
+                                                   className={`slide w-[200px] h-[200px] ${current === index - 1 ? 'active' : ''}`}
+                                                   style={{
+                                                       backgroundImage: `url(${photo})`,
+                                                       backgroundSize: 'cover',
 
-                {photos.map((photo, index) =>
-                    <div key={index}
-                         className='w-[400px] xl:w-[700px] h-[700px] xl:h-[600px]'
-                         style={{
-                             backgroundImage: `url(${photo})`,
-                             backgroundSize: 'cover',
-                         }}></div>
-                )}
-            </motion.div>
-
+                                                   }}></div>)}
+            </div>
         </div>
+
     );
 };
 

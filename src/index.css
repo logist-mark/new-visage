@@ -23,6 +23,7 @@ body{
 
 header, footer{
     background: rgba(255, 255, 255, 1);
+    z-index: 20;
 
 }
 
@@ -43,3 +44,9 @@ header, footer{
     font-weight: bold;
 }
 
+.slide{
+    @apply w-[300px] h-[300px] shrink-0 duration-200 blur-sm rounded;
+}
+.slide.active{
+    @apply scale-150 blur-0 z-10;
+}

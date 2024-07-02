@@ -14,7 +14,7 @@ const Header = () => {
     }
 
 
-    return (<header className='flex gap-2 items-center justify-between px-6 lg:px-40 xl:px-52 pt-4 sticky -top-1 z-10'>
+    return (<header className='flex gap-2 items-center justify-between px-6 lg:px-40 xl:px-52 pt-4 sticky -top-1 z-20'>
             <img src="/logo.png" width={180} alt="Visage logo"/>
             <nav>
                 <ul className='hidden xl:flex lg:gap-2 xl:gap-4 2xl:gap-6 font-semibold text-blue-900 *:uppercase lg:text-[10px] xl:text-[12px] 2xl:text-[16px]'>
