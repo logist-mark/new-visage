@@ -14,10 +14,10 @@ body{
     justify-content: space-between;
     min-height: 100vh;
 
-    background: url("../public/bg.jpg") no-repeat fixed bottom center ;
-    backdrop-filter: blur(10px) grayscale(0.9);
-    background-size: cover;
-
+    /*background: url("../public/bg.jpg") no-repeat fixed bottom center ;*/
+    /*backdrop-filter: blur(10px) grayscale(0.9);*/
+    /*background-size: cover;*/
+    background-color: #eaf4f4;
     /*font-family: 'Montserrat', sans-serif;*/
 }
 
@@ -29,7 +29,7 @@ header, footer{
 
 
 .menu-link{
-    @apply p-1 text-blue-900 border-b-[2px] border-b-transparent duration-300;
+    @apply p-1 text-blue-900 border-b-[2px] border-b-transparent duration-300 xl:text-[12px];
 }
 .menu-link:hover{
     color: #F96302;
@@ -49,4 +49,12 @@ header, footer{
 }
 .slide.active{
     @apply scale-150 blur-0 z-10;
+}
+
+.btn{
+    @apply  px-4 py-2 bg-blue-900 text-white rounded-xl border-2 border-blue-900 duration-200 flex items-center justify-around gap-2;
+}
+
+.btn:hover{
+    @apply bg-white text-blue-900 duration-200;
 }

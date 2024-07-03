@@ -3,7 +3,7 @@
 const ContactForm = () => {
     return (
         <div className='mt-20 flex flex-col items-center justify-center'>
-            <h2 className='text-4xl text-center lg:text-left lg:text-5xl text-white font-bold '>Бажаєте отримати консультацію?</h2>
+            <h2 className='text-4xl text-center lg:text-left lg:text-5xl text-blue-900 font-bold '>Бажаєте отримати консультацію?</h2>
             <form action="#" className='w-full lg:w-[800px] text-sm px-2 lg:px-4 py-10 bg-white rounded-xl mt-10 flex flex-col gap-4'>
                 <div className='grid grid-cols-4'>
                     {/* eslint-disable-next-line react/no-unescaped-entities */}
