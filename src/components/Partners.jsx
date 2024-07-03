@@ -1,18 +1,18 @@
 import React from 'react';
 
 const partnersLogos = [
-    'winkhaus.png',
-    'profine.png',
-    'renolit.png',
-    'alumotrade.png',
-    'avatas.png',
-    'viknaland.png',
-    'alutech.png',
-    'aluprof.png',
-    'framex.png',
-    'wintech.png',
-    'workua.png',
-    'oknaua.png'
+    'logos/winkhaus.png',
+    'logos/profine.png',
+    'logos/renolit.png',
+    'logos/alumotrade.png',
+    'logos/avatas.png',
+    'logos/viknaland.png',
+    'logos/alutech.png',
+    'logos/aluprof.png',
+    'logos/framex.png',
+    'logos/wintech.png',
+    'logos/workua.png',
+    'logos/oknaua.png'
 ]
 
 

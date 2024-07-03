@@ -1,6 +1,7 @@
 import {motion} from "framer-motion";
+import {NavLink} from "react-router-dom";
 
-const MobileMenu = () => {
+const MobileMenu = ({closeMenu}) => {
     return (
         <motion.div
             initial={{
@@ -24,13 +25,13 @@ const MobileMenu = () => {
                  <ul
 
                      className='w-full pt-20 px-6 text-2xl text-amber-600 flex flex-col items-center justify-center gap-8'>
-                     <li className='underline'><a href="#">Головна</a></li>
-                     <li className=''><a href="#">Виробництво</a></li>
-                     <li className=''><a href="#">Дилерам</a></li>
-                     <li className=''><a href="#">Сертифікати</a></li>
-                     <li className=''><a href="#">Про нас</a></li>
-                     <li className=''><a href="#">Контакти</a></li>
-                     <li className=''><a href="#">Фото</a></li>
+                     <li className=''><NavLink to="/" className={({isActive}) => isActive ? 'active-link' : ''} onClick={()=>closeMenu(false)}>Головна</NavLink></li>
+                     <li className=''><NavLink to="/production" className={({isActive}) => isActive ? 'active-link' : ''} onClick={()=>closeMenu(false)}>Виробництво</NavLink></li>
+                     <li className=''><NavLink to="/dealer" className={({isActive}) => isActive ? 'active-link' : ''} onClick={()=>closeMenu(false)}>Дилерам</NavLink></li>
+                     <li className=''><NavLink to="/certificates" className={({isActive}) => isActive ? 'active-link' : ''} onClick={()=>closeMenu(false)}>Сертифікати</NavLink></li>
+                     <li className=''><NavLink to="/about" className={({isActive}) => isActive ? 'active-link' : ''} onClick={()=>closeMenu(false)}>Про нас</NavLink></li>
+                     <li className=''><NavLink to="/contacts" className={({isActive}) => isActive ? 'active-link' : ''} onClick={()=>closeMenu(false)}>Контакти</NavLink></li>
+                     <li className=''><NavLink to="/photos" className={({isActive}) => isActive ? 'active-link' : ''} onClick={()=>closeMenu(false)}>Фото</NavLink></li>
                  </ul>
 
          </nav>

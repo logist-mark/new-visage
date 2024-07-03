@@ -6,8 +6,8 @@ const DealerPage = () => {
         <div className='w-full py-6'>
             <h2 className='text-4xl  text-blue-900 font-bold mb-6'>Нашим дилерам</h2>
             <div>
-                <div className='grid grid-cols-2'>
-                    <p className='text-xl border-r px-4 border-blue-900'>
+                <div className='grid grid-cols-1 xl:grid-cols-2'>
+                    <p className='text-xl border-b xl:border-r xl:border-b-0 xl:px-4 py-4 border-blue-900 mb-4'>
                         Тут Ви зможете завантажити програму WinkHaus Okna для розрахунку вартості метало-пластикових
                         конструкцій
                         вироблених на нашому заводі.

@@ -17,7 +17,7 @@ const Header = () => {
     return (<header
         className='flex gap-2 items-center justify-between px-6 lg:px-40 xl:px-52 pt-4 sticky -top-1 z-20 shadow-xl'>
         <NavLink to='/'>
-            <img src="/logo.png" width={180} alt="Visage logo"/>
+            <img src="/logos/logo.png" width={180} alt="Visage logo"/>
         </NavLink>
         <nav>
             <ul className='hidden xl:flex lg:gap-2 xl:gap-4 2xl:gap-6 font-semibold text-blue-900 *:uppercase lg:text-[10px] xl:text-[12px] 2xl:text-[16px]'>
@@ -58,7 +58,7 @@ const Header = () => {
 
         <button className='block xl:hidden text-3xl z-20' onClick={toggleMenu}>{!menuShown ? <CiMenuBurger/> :
             <RxCross1 className='text-white'/>}</button>
-        <AnimatePresence>{menuShown && <MobileMenu/>}</AnimatePresence>
+        <AnimatePresence>{menuShown && <MobileMenu closeMenu={setMenuShown}/>}</AnimatePresence>
     </header>);
 };
 

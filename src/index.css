@@ -52,7 +52,7 @@ header, footer{
 }
 
 .btn{
-    @apply  px-4 py-2 bg-blue-900 text-white rounded-xl border-2 border-blue-900 duration-200 flex items-center justify-around gap-2;
+    @apply  px-4 py-2 bg-blue-900 text-white rounded-xl border-2 border-blue-900 duration-200 flex items-center  gap-2;
 }
 
 .btn:hover{
