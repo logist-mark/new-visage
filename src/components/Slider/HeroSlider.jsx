@@ -57,7 +57,7 @@ const HeroSlider = () => {
 
 
 
-            className="relative z-0 w-full h-[550px] xl:h-[480px] 2xl:h-[720px]   rounded-lg overflow-hidden mb-10">
+            className="relative z-0 w-full h-[550px] 2xl:h-[580px]   rounded-lg overflow-hidden mb-10">
             <Slides slides={SLIDES} imgIndex={index}/>
             <div className='absolute bottom-6 right-8 z-10 flex gap-10 text-5xl text-white '>
                 <button onClick={handlePrevSlide}
