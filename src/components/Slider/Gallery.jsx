@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react";
 
 
-function Gallery({photos}) {
+function Gallery({photos ,delay}) {
     const [slide, setSlide] = useState(1);
 
     function next() {
@@ -26,6 +26,7 @@ function Gallery({photos}) {
                 className="flex items-end gap-1 duration-200 px-16 w-[1950px]"
                 style={{
                     marginLeft: `-${slide * 300}px`,
+                    transitionDelay: `${delay}ms`
                 }}
             >
                 {photos.map((img, index) => (

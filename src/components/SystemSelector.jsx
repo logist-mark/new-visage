@@ -24,7 +24,7 @@ const links = [
 const SystemSelector = () => {
     const [choice, setChoice] = useState(links[0])
     return (
-        <div className='w-full  bg-white mt-10 rounded-lg shadow-lg py-10 px-6 text-lg'>
+        <div className='w-full  bg-white mt-10 rounded-lg shadow-lg py-16 px-6 text-lg'>
             <div>
                 <label htmlFor="os" className='flex flex-col xl:flex-row gap-4 text-sm xl:text-lg' >
                     Оберіть Вашу операційну систему:

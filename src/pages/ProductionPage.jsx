@@ -27,16 +27,19 @@ const ProductionPage = () => {
                                text='Власний виробничий цех обладнано сучасними верстатами Elumatec та Stürtz, що дозволяють
                                      виготовляти 650-700 вікон на день та гарантувати якість виготовлених конструкцій.'
                                photos={pvchPhotos}
-                               rightSide/>
+                               rightSide
+                               delay={500}/>
             <ProductionSection title='ВИРОБНИЦТВО АЛЮМІНІЄВИХ КОНСТРУКЦІЙ'
                                text='Власний виробничий цех обладнано сучасними верстатами Elumatec, що дозволяють забезпечувати
                                якість виготовлених конструкцій.'
-                               photos={aluminiumPhotos}/>
+                               photos={aluminiumPhotos}
+                               delay={1000}/>
             <ProductionSection title='ВИРОБНИЦТВО СКЛОПАКЕТІВ'
                                text='Ми маємо власну автоматичну лінію виробництва склопакетів LiSEC, що гарантує підприємству
                                гнучкість на ринку і вчасну здачу об’єктів.'
                                photos={glassPhotos}
-                               rightSide/>
+                               rightSide
+                               delay={2000}/>
 
         </div>);
 };

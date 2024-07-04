@@ -58,3 +58,31 @@ header, footer{
 .btn:hover{
     @apply bg-white text-blue-900 duration-200;
 }
+
+.certificate div{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all;
+    transition-duration: .2s;
+
+}
+
+.certificate div:hover::before{
+    content: 'Натисніть, щоб збільшити зображення';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    color: white;
+    cursor: pointer;
+    transition: all;
+    transition-duration: .2s;
+    
+
+}
