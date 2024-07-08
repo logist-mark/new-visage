@@ -5,14 +5,12 @@ function Gallery({photos ,delay}) {
     const [slide, setSlide] = useState(1);
 
     function next() {
-
         setSlide((prev) => (prev + 1 < photos.length ? prev + 1 : 0));
-        
     }
 
 
     useEffect(() => {
-        const interval = setInterval(next, 4000 + delay);
+        const interval = setInterval(next, 3000 + delay);
 
         return () => {
             clearInterval(interval);
@@ -26,7 +24,6 @@ function Gallery({photos ,delay}) {
                 className="flex items-end gap-1 duration-200 px-16 w-[1950px]"
                 style={{
                     marginLeft: `-${slide * 300}px`
-
                 }}
             >
                 {photos.map((img, index) => (

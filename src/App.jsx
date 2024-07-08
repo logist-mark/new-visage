@@ -8,6 +8,7 @@ import DealerPage from "./pages/DealerPage.jsx";
 import CertificatesPage from "./pages/CertificatesPage.jsx";
 import ContactsPage from "./pages/ContactsPage.jsx";
 import PhotosPage from "./pages/PhotosPage.jsx";
+import TestPage from "./pages/TestPage.jsx";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                     <Route path="/about" element={<AboutPage/>}/>
                     <Route path="/contacts" element={<ContactsPage/>}/>
                     <Route path='/photos' element={<PhotosPage/>}/>
+                    <Route path='test' element={<TestPage/>}/>
 
                 </Routes>
             </main>

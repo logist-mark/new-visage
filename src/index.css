@@ -87,3 +87,59 @@ header, footer{
     
 
 }
+
+
+    /* This container is needed to position the front and back side */
+    .flip-card{
+        @apply bg-white py-6 px-4 ;
+    }
+    .flip-card-inner {
+        @apply  relative w-full h-full text-center flex flex-col gap-6;
+
+    }
+
+
+
+
+
+
+
+
+
+@screen lg{
+    .flip-card{
+        @apply h-full w-full p-0;
+    }
+    /* This container is needed to position the front and back side */
+    .flip-card-inner {
+        @apply relative w-full h-full text-center transition-transform duration-700 transform bg-white rounded-lg;
+        transform-style: preserve-3d;
+    }
+
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+    .flip-card:hover .flip-card-inner {
+
+        transform: rotateY(180deg);
+    }
+
+    /* Position the front and back side */
+    .flip-card-front, .flip-card-back {
+        @apply absolute w-full h-full flex justify-center items-center p-6;
+
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+
+    }
+
+    /* Style the front side (fallback if image is missing) */
+    .flip-card-front {
+        @apply text-black bg-white rounded-lg;
+    }
+
+    /* Style the back side */
+    .flip-card-back {
+        @apply text-white bg-blue-900 rounded-lg flex justify-center items-center;
+
+        transform: rotateY(180deg);
+    }
+}
