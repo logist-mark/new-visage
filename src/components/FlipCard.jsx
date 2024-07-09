@@ -1,7 +1,11 @@
 
 const FlipCard = ({text, children, cols, rows=1}) => {
     return (
-        <div className={`flip-card rounded-xl shadow-lg col-span-${cols} row-span-${rows}`}
+        <div className={`flip-card rounded-xl shadow-lg `}
+             style={{
+                 columnSpan: 5,
+                 rowSpan: 5,
+             }}
         >
             <div className="flip-card-inner">
                <div className="flip-card-front">

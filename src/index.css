@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html{
+html {
     scroll-behavior: smooth;
 
 }
-*{box-sizing: border-box;}
-body{
+
+* {
+    box-sizing: border-box;
+}
+
+body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -21,45 +26,47 @@ body{
     /*font-family: 'Montserrat', sans-serif;*/
 }
 
-header, footer{
+header, footer {
     background: rgba(255, 255, 255, 1);
     z-index: 20;
 
 }
 
 
-.menu-link{
+.menu-link {
     @apply p-1 text-blue-900 border-b-[2px] border-b-transparent duration-300 xl:text-[12px];
 }
-.menu-link:hover{
+
+.menu-link:hover {
     color: #F96302;
     border-bottom: 2px solid #F96302;
     transition: .3s;
 
 }
 
-.active-link{
+.active-link {
     color: #F96302;
     border-bottom: 2px solid #F96302;
     font-weight: bold;
 }
 
-.slide{
+.slide {
     @apply w-[300px] h-[300px] shrink-0 duration-200 blur-sm rounded;
 }
-.slide.active{
+
+.slide.active {
     @apply scale-150 blur-0 z-10;
 }
 
-.btn{
-    @apply  px-4 py-2 bg-blue-900 text-white rounded-xl border-2 border-blue-900 duration-200 flex items-center  gap-2;
+.btn {
+    @apply px-4 py-2 bg-blue-900 text-white rounded-xl border-2 border-blue-900 duration-200 flex items-center  gap-2;
 }
 
-.btn:hover{
+.btn:hover {
     @apply bg-white text-blue-900 duration-200;
 }
 
-.certificate div{
+.certificate div {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
@@ -68,7 +75,7 @@ header, footer{
 
 }
 
-.certificate div:hover::before{
+.certificate div:hover::before {
     content: 'Натисніть, щоб збільшити зображення';
     width: 100%;
     height: 100%;
@@ -79,66 +86,55 @@ header, footer{
     text-align: center;
     top: 0;
     left: 0;
-    background: rgba(0,0,0,.5);
+    background: rgba(0, 0, 0, .5);
     color: white;
     cursor: pointer;
     transition: all;
     transition-duration: .2s;
-    
+
 
 }
 
 
-    /* This container is needed to position the front and back side */
-    .flip-card{
-        @apply bg-white py-6 px-4 ;
-    }
-    .flip-card-inner {
-        @apply  relative w-full h-full text-center flex flex-col gap-6;
+.flip-card {
+    @apply w-full h-full bg-white rounded-lg shadow-xl p-0 ;
+}
 
-    }
+.flip-card-inner {
+    @apply text-center  transition-transform duration-700 transform bg-white rounded-lg;
+    transform-style: preserve-3d;
+}
 
-
-
-
-
-
-
-
-
-@screen lg{
-    .flip-card{
-        @apply h-full w-full p-0;
-    }
-    /* This container is needed to position the front and back side */
-    .flip-card-inner {
-        @apply relative w-full h-full text-center transition-transform duration-700 transform bg-white rounded-lg;
-        transform-style: preserve-3d;
-    }
-
-    /* Do an horizontal flip when you move the mouse over the flip box container */
+@screen lg {
     .flip-card:hover .flip-card-inner {
         transform: rotateY(180deg);
     }
 
-    /* Position the front and back side */
+    .flip-card-inner {
+        @apply lg:relative lg:w-full lg:h-full;
+    }
+
     .flip-card-front, .flip-card-back {
-        @apply absolute w-full h-full flex justify-center items-center p-6;
-
-        -webkit-backface-visibility: hidden; /* Safari */
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
-
     }
 
-    /* Style the front side (fallback if image is missing) */
-    .flip-card-front {
-        @apply text-black bg-white rounded-lg;
-    }
-
-    /* Style the back side */
     .flip-card-back {
-        @apply text-white bg-blue-900 rounded-lg flex justify-center items-center;
-
         transform: rotateY(180deg);
     }
 }
+
+.flip-card-front, .flip-card-back {
+    @apply lg:absolute w-full h-full flex justify-center items-center p-6;
+}
+
+
+.flip-card-front {
+    @apply text-black bg-white rounded-lg;
+}
+
+.flip-card-back {
+    @apply lg:text-white lg:bg-blue-900 rounded-lg flex justify-center items-center;
+}
+
+
