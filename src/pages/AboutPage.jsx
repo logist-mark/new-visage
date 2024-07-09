@@ -13,7 +13,6 @@ const AboutPage = () => {
             <div className="flip-card col-span-2 row-span-1 bg-red-400 rounded-lg">
 
                 <div className="flip-card-inner">
-
                     <div className="flip-card-front flex flex-col lg:flex-row gap-4 ">
                         <TbRotate360 className='absolute top-2 right-2 rotate-45 opacity-50'/>
                         <p className='text-6xl font-semibold text-blue-900'>
