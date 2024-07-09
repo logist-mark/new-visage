@@ -97,7 +97,7 @@ header, footer {
 
 
 .flip-card {
-    @apply w-full h-full bg-white rounded-lg shadow-xl p-0 ;
+    @apply w-full h-full  bg-white rounded-lg shadow-xl p-0 ;
 }
 
 .flip-card-inner {
