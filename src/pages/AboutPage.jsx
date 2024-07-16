@@ -8,13 +8,15 @@ import {FaHandshake} from "react-icons/fa6";
 
 const AboutPage = () => {
     return (
+
+
         <div
-            className="flex flex-col gap-4 h-[3300px] lg:grid lg:grid-cols-5 lg:grid-rows-5 lg:h-[740px] lg:gap-3 lg:py-4 lg:px-2 bg-blue-100">
+            className="flex flex-col gap-4 h-[3300px] lg:grid lg:grid-cols-5 lg:grid-rows-5 lg:h-[740px] lg:gap-3 lg:py-4 lg:px-2 ">
             <div className="flip-card col-span-2 row-span-1 bg-red-400 rounded-lg">
 
                 <div className="flip-card-inner">
                     <div className="flip-card-front flex flex-col lg:flex-row gap-4 ">
-                        <TbRotate360 className='absolute top-2 right-2 rotate-45 opacity-50'/>
+                        <TbRotate360 className='hidden lg:block absolute top-2 right-2 rotate-45 opacity-50'/>
                         <p className='text-6xl font-semibold text-blue-900'>
                             25+
                         </p>
@@ -146,7 +148,18 @@ const AboutPage = () => {
                     </div>
                 </div>
             </div>
-            <div className="flip-card col-span-4 row-span-1 bg-orange-400 rounded-lg">
+
+            <div className="flip-card col-span-2 row-span-1 bg-orange-400 rounded-lg">
+                <div className="flip-card-inner">
+                    <div className="flip-card-front">
+
+                    </div>
+                    <div className="flip-card-back">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div className="flip-card col-span-3 row-span-1 bg-orange-400 rounded-lg">
                 <div className="flip-card-inner">
                     <div
                         className="flip-card-front flex flex-col lg:flex-row gap-4 font-semibold text-xl text-center lg:text-left">
@@ -163,18 +176,9 @@ const AboutPage = () => {
                     </div>
                 </div>
             </div>
-            <div className="flip-card col-span-1 row-span-1 bg-orange-400 rounded-lg">
-                <div className="flip-card-inner">
-                    <div className="flip-card-front">
-
-                    </div>
-                    <div className="flip-card-back">
-                        <p></p>
-                    </div>
-                </div>
-            </div>
 
         </div>
+        
     );
 };
 
